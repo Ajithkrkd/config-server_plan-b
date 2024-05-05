@@ -1,3 +1,4 @@
+
 server:
   port: 8082
 spring:
@@ -18,17 +19,44 @@ spring:
   kafka:
     producer:
       bootstrap-servers: localhost:9092
-
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
-      
+
   ## zipkin configuration
 
   zipkin:
     baseUrl: http://localhost:9411
+
+
 management:
   tracing:
     sampling:
       probability: 1.0
+  health:
+    circuit-breakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+  endpoint:
+    health:
+      show-details: always
+resilience4j:
+  circuitbreaker:
+    instances:
+      projectCircuitBreaker:
+        registerHealthIndicator: true
+        eventConsumerBufferSize: 10
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        slidingWindowSize: 10
+        slidingWindowType: COUNT_BASED
+
+
