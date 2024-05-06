@@ -4,7 +4,7 @@ spring:
   application:
     name: user-service
   datasource:
-    url: jdbc:mysql://34.93.146.191:3309/plan_b_user
+    url: jdbc:mysql://34.93.146.191:3306/plan_b_user
     username: root
     password: planbroot
     driver-class-name: com.mysql.cj.jdbc.Driver
