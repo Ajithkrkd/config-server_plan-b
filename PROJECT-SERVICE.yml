@@ -5,9 +5,9 @@ spring:
   application:
     name: project-service
   datasource:
-    url: jdbc:mysql://localhost:3309/plan_b_project
+    url: jdbc:mysql://34.93.146.191:3309/plan_b_project
     username: root
-    password: password#2#2
+    password: planbroot
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     properties:
