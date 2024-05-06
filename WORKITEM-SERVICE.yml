@@ -2,9 +2,9 @@ server:
   port: 8084
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3309/plan_b_workItem
+    url: jdbc:mysql://34.93.146.191:3309/plan_b_workItem
     username: root
-    password: password#2#2
+    password: planbroot
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     properties:
