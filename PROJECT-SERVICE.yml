@@ -18,7 +18,7 @@ spring:
   #kafka configuration
   kafka:
     producer:
-      bootstrap-servers: localhost:9092
+      bootstrap-servers: broker:29092
 eureka:
   client:
     service-url:
